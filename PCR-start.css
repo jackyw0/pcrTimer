@@ -1,0 +1,250 @@
+.heading {
+  font-size: 60px;
+  font-weight: 550;
+  opacity: 0.85;
+  font-family: "Roboto", Arial;
+  text-align: center;
+  min-width: 100px;
+  padding-top: 20px;
+  margin-bottom: 0px;
+
+}
+
+.heading2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 250;
+  font-family: "Roboto", Arial;
+  opacity: 0.9;
+  margin-top: 0px;
+}
+
+.headingDiv{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(221, 229, 239);
+  height: auto;
+  width: 100;
+  min-width: 100px;
+  margin: 0 auto;
+  margin-top: 20px;
+  border: none;
+  overflow: hidden; 
+
+}
+.start-button {
+  background-color: rgb(65, 118, 217);
+  color: white;
+  font-size: 22px;
+  width: 140px;
+  height: 70px;
+  border: none;
+  border-radius: 40px;
+  font-family: "Robofto", Arial;
+  font-weight: 400;
+  transition: opacity 0.15s; 
+   margin-bottom: 16px;
+ 
+}
+
+.start-button:hover {
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+.buttonsDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+
+}
+
+.learn-more-button{
+  background-color: rgb(255, 255, 255);
+  border: rgb(95, 143, 233);
+  color: rgb(95, 143, 233);
+  width: 140px;
+  border-width: 2px;
+  height: 70px;
+  margin-left: 24px;
+  font-size: 22px;
+  border-radius: 40px;
+  border-style: solid;
+  font-family: Arial;
+  transition: opacity 0.15s;
+   margin-bottom: 16px;
+}
+.learn-more-button:hover {
+  opacity: 0.85;
+  cursor: pointer;
+}
+.contentDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  background-color: rgb(221, 229, 239);
+  height:100;
+  padding-bottom: 50px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+.contentTitle {
+  font-weight: 440;
+  font-size: 48px;
+  font-family: "Roboto", Arial;
+  padding-top: 24px;
+  margin-bottom: 4px;
+  opacity: 0.8;
+}
+.contentTitle2{
+  font-weight: 260;
+  font-size: 24px;
+  font-family: "Roboto", Arial;
+  margin-top: 0px;
+  opacity: 0.9;
+
+
+}
+.contentText {
+   width:74%;
+   height: 400px;
+   margin: 20px auto;
+   background-color: rgb(209, 221, 230);
+   border-radius: 36px;
+
+   
+}
+.contentText p{
+  font-size: 16px;
+  font-family: "Roboto", Arial;
+  text-align: center;
+  opacity: 0.8;
+  font-weight: 240;
+
+}
+.contentText h3 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 315;
+  font-family: "Roboto", Arial;
+  opacity: 0.8;
+ 
+}
+
+
+.contentText1, .contentText2, .contentText3 {
+  background:none;
+}
+.contentText4 {
+  text-align: center;
+  font-size: 26px;
+  font-family: "Roboto", Arial;
+  font-weight: 250;
+  margin-top: 52px;
+}
+
+.pcr-image {
+  width: 1400px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.imageDiv {
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; 
+  margin-top:20px;
+
+  background-color: rgb(218, 224, 231)
+
+}
+
+.footerDiv {
+  background-color: rgb(221, 229, 239);
+  height: 100;
+  width: 100%;
+  margin-top: 20px;
+  display:flex;
+  flex-direction: column;
+}
+
+.footerTitle {
+  font-family: Roboto, Arial;
+  font-size: 40px;
+  font-weight: 290;
+  padding-top: 20px;
+  padding-left: 20px;
+  margin-bottom: 18px;
+  margin-top: 0px;
+}
+
+.footerP, .anchor, .anchor2, .anchor3 {
+  font-family: Roboto, Arial;
+  font-size: 16px;
+  font-weight: 120;
+  font-weight: 250;
+  margin-top: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.anchor {
+  opacity: 0.7;
+  text-decoration-style: none;
+  margin: 0px 0px;
+  border:none;
+  padding-left: 0px;
+  padding-right: 4px;
+}
+
+  .contentText > div {
+    display: none;
+    text-align: center;
+    transition: opacity 0.5s ease;
+  
+  }
+
+  .contentText > div.active {
+    display: block;
+  }
+
+  .slideshow-buttons {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .next-button, .previous-button {
+    align-items: center;
+    padding: 10px 14px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    
+    background-color: #6796e7;
+    color: white;
+    cursor: pointer;
+    margin: 0 18px;
+  }
+  .next-button:hover, .previous-button:hover {
+    opacity: 0.85;
+  }
+
+
+.denaturation {
+width: 500px;
+}
+.annealing {
+  width: 660px;
+ margin-top: -310px;
+}
+.extension {
+  width: 400px;
+  margin-top: -100px;
+}

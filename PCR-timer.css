@@ -1,0 +1,160 @@
+.labels {
+  background-color: rgb(197, 215, 231);
+  margin: 0px 0px;
+  padding: 24px 24px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", Arial;
+  font-size: 20px;
+  justify-content: center;
+  align-items: left;
+  font-weight: 300;
+  border-style: solid;
+  border-color: rgb(193, 208, 227);
+  border-radius: 24px;
+}
+.labels input {
+  font-family: "Roboto", Arial;
+  font-weight: 240;
+  font-size: 16px;
+  border-radius: 8px;
+  border-style:solid;
+  border-width: 1px;
+}
+.buttons {
+  font-family: "Roboto", Arial;
+  font-size: 16px;
+  font-weight: 120;
+  font-weight: 250;
+  margin-top: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.all {
+  background-color: rgb(234, 237, 245);
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  height: 100;
+  font-family: "Roboto", Arial;
+}
+.headingDiv {
+  font-family: "Roboto", Arial;
+  font-weight: 300;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  margin-bottom: 0px;
+  padding: 0, 0;
+  border: none;
+}
+
+.heading {
+  margin-bottom: 20px;
+}
+
+.subheadingDiv {
+font-family : "Roboto", Arial;
+  font-weight: 320;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin: 0, 0;
+
+}
+.formula {
+  font-size: 14px;
+  font-weight: 240;
+  font-style: italic;
+}
+
+.startButton {
+   background-color: rgb(65, 118, 217);
+  color: rgb(222, 230, 231);
+  font-size: 24px;
+  width: 120px;
+  height: 60px;
+  border: none;
+  border-radius: 40px;
+  font-family: "Roboto", Arial;
+  font-weight: 280;
+  transition: opacity 0.15s; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 28px;
+}
+.startButton:hover {
+  opacity: 0.85;
+  cursor: pointer;
+  
+}
+
+.buttons2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.pauseButton, .resumeButton, .resetButton {
+  background-color: rgb(234, 237, 245);
+  color: rgb(57, 62, 62);
+  font-size: 18px;
+  border: 1px;
+  border-style: solid;
+  border-color: rgb(105, 109, 110);
+  border-radius: 40px;
+  font-family: "Roboto", Arial;
+  font-weight: 220;
+  transition: opacity 0.15s; 
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+.pauseButton:hover, .resumeButton:hover, .resetButton:hover, .backButton:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.backButton {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  background-color: rgb(234, 237, 245);
+  color: rgb(57, 62, 62);
+  font-size: 18px;
+  border: 1px;
+  border-style: solid;
+  border-color: rgb(105, 109, 110);
+  border-radius: 10px;
+  font-family: "Roboto", Arial;
+  font-weight: 220;
+  transition: opacity 0.15s; 
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+#display {
+  font-size: 44px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: rgb(197, 215, 231);
+  padding: 36px 36px;
+  border-radius: 18px;
+  font-family: "Roboto", Arial;
+  font-weight: 340;
+}

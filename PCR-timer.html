@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PCR Timer</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="pcr-timer.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <audio id="pcrSound" src="pcr-sound.mp3" preload="auto"></audio>
+  </head>
+<body>
+  <div class="all">
+   <div class="headingDiv"> 
+      <p class="heading">Polymerase Chain Reaction Timer</p>
+    </div>
+  <div class="subheadingDiv">
+    <p>Adjust Your Settings</p>
+  </div>
+
+
+<div class="labels">
+<label class="initCSS">Initialization Time (sec):
+  <input type="number" id="initialization" value="30">
+</label><br>
+<label>Number of Cycles:
+  <input type="number" id="cycles" value="30">
+</label><br>
+<label>Denaturation Time (sec):
+  <input type="number" id="denaturation" value="15">
+</label><br>
+<label>Annealing Time (sec):
+  <input type="number" id="annealing" value="30">
+</label><br>
+<label>Extension Time (sec):
+  <input type="number" id="extension" value="60">
+</label>
+</div>
+<p class="formula">Formula: Initialization + Number of Cycles(Denaturation + Annealing + Extension)</p>
+
+<div class="buttons">
+<button class=startButton onclick="startTimer()">Start</button>
+<h3 id="display">Time Remaining: </h3>
+<div class="buttons2"><button class=pauseButton onclick="pauseTimer()">Pause</button>
+<button class=resumeButton onclick="resumeTimer()">Resume</button>
+<button class=resetButton onclick="resetTimer()">Reset</button>
+</div>
+<button class="backButton" onclick="window.location.href='pcr-start.html'">Back to Start</button>
+</div>
+</div>
+
+
+<script>
+ let countdownInterval;
+ let isPaused = false;
+ let remainingTime = 0;
+
+  function startTimer() {
+    clearInterval(countdownInterval);
+
+    const initialization = parseInt(document.getElementById('initialization').value);
+    const cycles = parseInt(document.getElementById('cycles').value);
+    const denaturation = parseInt(document.getElementById('denaturation').value);
+    const annealing = parseInt(document.getElementById('annealing').value);
+    const extension = parseInt(document.getElementById('extension').value);
+      if (isPaused) {
+      isPaused = false;
+    }
+
+    const totalTime =
+      initialization + cycles * (denaturation + annealing + extension); 
+
+    remainingTime = totalTime;
+    countdownInterval = setInterval(() => {
+      if (!isPaused) {
+        if (remainingTime <= 0) {
+          clearInterval(countdownInterval);
+          document.getElementById("display").textContent = "PCR is complete!";
+          document.getElementById("pcrSound").play();
+        } else {
+          const minutes = Math.floor(remainingTime / 60);
+          const seconds = remainingTime % 60;
+          document.getElementById("display").textContent =
+            `Time Remaining: ${minutes}:${seconds.toString().padStart(2, '0')}`;
+          remainingTime--;
+        }
+      }
+    }, 1000);
+  }
+  function pauseTimer() {
+    isPaused = true;
+  }
+
+  function resumeTimer() {
+    if (isPaused) {
+      isPaused = false;
+    }
+  }
+  function resetTimer() {
+    clearInterval(countdownInterval);      
+    remainingTime = 0;                     
+    isPaused = false;                       
+    document.getElementById("display").textContent = "Time Remaining: 0:00";
+  }
+  document.getElementById("display").textContent = "Time Remaining: 0:00";
+
+
+</script>
+
+</body>
+</html>

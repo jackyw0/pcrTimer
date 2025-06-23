@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PCR Timer - Start</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="PCR-start.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="headingDiv">
+    <h1 class="heading">PCR Timer</h1>
+    <h2 class="heading2">For the Polymerase Chain Reaction</h2>
+  
+  <div class="buttonsDiv">
+    <button class="start-button" onclick="window.location.href='pcr-timer.html'">Set Timer</button>
+    <button class="learn-more-button"
+      onclick="document.getElementById('scrollToContent').scrollIntoView({ behavior: 'smooth' });">Learn More</button>
+  </div>
+</div>
+
+
+
+
+  
+
+
+
+
+
+
+  <div class="imageDiv">
+    <img class="pcr-image" src="dnaDesign3.png" alt="PCR Image">
+  </div>
+
+
+
+
+
+
+
+<div class="contentDiv" id="scrollToContent">
+
+    <h1 class="contentTitle">DNA Amplification</h1>
+    <h2 class="contentTitle2">One Billion Copies in Hours</h2>
+    
+
+   <div class="contentText">
+
+    <div class=contentText1>
+    <h3>I. Denaturation</h3>
+    <p>High Temperature unwraps the Double Stranded DNA</p>
+      <img class="denaturation" src="IMG_0542.png">
+     </div>
+
+    <div class=contentText2>
+    <h3>II. Annealing</h3>
+    <p>Primers bind to the start of single stranded DNA fragment </p>
+     <img class="annealing" src="IMG_0543.png">
+    </div>
+
+    <div class=contentText3>
+    <h3>III. Extension</h3>
+    <p>Taq Polymerase attaches corresponding nucleotides to each single stranded DNA</p>
+      <img class="extension" src="IMG_0544.png">
+    </div>
+    </div>
+
+    <div class="slideshow-buttons">
+  <button class=previous-button onclick="changeSlide(-1)"><</button>
+  <button class=next-button onclick="changeSlide(1)">></button>
+</div>
+     <p class="contentText4">The steps are repeated in cycles, each exponetially increasing the number of DNA</p>
+   
+
+</div>
+
+<div class="footerDiv">
+  <h2 class="footerTitle">More information :)</h2>
+<p class="footerP">created by jacky. This is my first coding project; created with HTML, CSS, and JavaScript, also with some digital art. This was really basic, but I hope to create more complex projects (with more beautiful art) in the future as I learn more.  </p>
+<p class="anchor2">Check out the for the <a class="anchor" href="https://youtu.be/AZuWUxQk6fQ" target="_blank">timelapse</a>art on this website</p>
+<p class="anchor3">Contact: weng11j29@gmail.com</p>
+</div>
+
+    
+</body>
+
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".contentText > div");
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove("active");
+      if (i === index) {
+        slide.classList.add("active");
+      }
+    });
+  }
+
+  function changeSlide(direction) {
+    currentSlide += direction;
+    if (currentSlide < 0) currentSlide = slides.length - 1;
+    if (currentSlide >= slides.length) currentSlide = 0;
+    showSlide(currentSlide);
+  }
+    showSlide(currentSlide);
+
+    setInterval(() => {
+    changeSlide(1);
+  }, 6500);
+
+  function changeSlide(direction) {
+  currentSlide += direction;
+  if (currentSlide < 0) currentSlide = slides.length - 1;
+  if (currentSlide >= slides.length) currentSlide = 0;
+  showSlide(currentSlide);
+  resetInterval();  
+  }
+</script>
+
+
+</html>
