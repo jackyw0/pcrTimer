@@ -3,7 +3,7 @@
 <head>
   <title>PCR Timer - Start</title>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="PCR-start.css">
+  <link rel="stylesheet" href="styles/pcr-start.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -32,7 +32,7 @@
 
 
   <div class="imageDiv">
-    <img class="pcr-image" src="dnaDesign3.png" alt="PCR Image">
+    <img class="pcr-image" src="others/dnaDesign3.png" alt="PCR Image">
   </div>
 
 
@@ -52,19 +52,19 @@
     <div class=contentText1>
     <h3>I. Denaturation</h3>
     <p>High Temperature unwraps the Double-Stranded DNA</p>
-      <img class="denaturation" src="IMG_0542.PNG">
+      <img class="denaturation" src="others/IMG_0542.PNG">
      </div>
 
     <div class=contentText2>
     <h3>II. Annealing</h3>
     <p>Primers bind to the start of single-stranded DNA fragment </p>
-     <img class="annealing" src="IMG_0543.PNG">
+     <img class="annealing" src="others/IMG_0543.PNG">
     </div>
 
     <div class=contentText3>
     <h3>III. Extension</h3>
     <p>Taq Polymerase attaches corresponding nucleotides to each single-stranded DNA</p>
-      <img class="extension" src="IMG_0544.PNG">
+      <img class="extension" src="others/IMG_0544.PNG">
     </div>
     </div>
 
@@ -87,38 +87,7 @@
     
 </body>
 
-<script>
-  let currentSlide = 0;
-  const slides = document.querySelectorAll(".contentText > div");
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.remove("active");
-      if (i === index) {
-        slide.classList.add("active");
-      }
-    });
-  }
-
-  function changeSlide(direction) {
-    currentSlide += direction;
-    if (currentSlide < 0) currentSlide = slides.length - 1;
-    if (currentSlide >= slides.length) currentSlide = 0;
-    showSlide(currentSlide);
-  }
-    showSlide(currentSlide);
-
-    setInterval(() => {
-    changeSlide(1);
-  }, 6500);
-
-  function changeSlide(direction) {
-  currentSlide += direction;
-  if (currentSlide < 0) currentSlide = slides.length - 1;
-  if (currentSlide >= slides.length) currentSlide = 0;
-  showSlide(currentSlide);
-  resetInterval();  
-  }
+<script src="index.js">
 </script>
 
 
